@@ -6,8 +6,18 @@ USAGE
 -----
 python upload_folder_to_shopify.py \
     --store mystore              # “mystore” or “mystore.myshopify.com”
-    --token shpat_XXX            # Admin API access token (read/write_files)
+    --token shpat_XXX            # Admin API access token
     ./assets                     # folder containing files to push
+
+REQUIRES
+--------
+Admin API scopes:
+- write_files
+- read_files
+- read_products
+- read_themes
+- read_orders
+- read_draft_orders
 """
 
 import argparse, json, mimetypes, os, sys, hashlib
