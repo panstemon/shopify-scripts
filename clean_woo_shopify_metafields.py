@@ -1,3 +1,23 @@
+#!/usr/bin/env python3
+"""
+Delete all unstructured Shopify metafields with namespace starting with 'woo.*'
+from either products or collections.
+
+USAGE
+-----
+python clean_metafields.py \
+    --store my-store.myshopify.com     # Shopify store domain
+    --token shpat_XXX                  # Admin API access token (requires metafield scopes)
+    --type products                    # Resource type: products or collections
+
+REQUIRES
+--------
+Admin API scopes:
+- read_products
+- read_metafields
+- write_metafields
+"""
+
 import argparse
 import time
 import requests
