@@ -16,6 +16,10 @@ REQUIRES
 Admin API scopes:
 - write_files
 - read_files
+- read_products
+- read_themes
+- read_orders
+- read_draft_orders
 """
 import argparse, json, mimetypes, os, sys, hashlib
 from pathlib import Path
